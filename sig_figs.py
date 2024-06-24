@@ -43,19 +43,19 @@ class ChemNumber:
         self.val=val
     def __str__(self):
         return str(self.val)
-    def __rtruediv__(self,rhs):
-        return do_op(rhs, self.val, divide)
+    def __rtruediv__(self,lhs):
+        return do_op(lhs, self.val, divide)
     def __truediv__(self,rhs):
         return do_op(self.val, rhs, divide)
-    def __rmul__(self,rhs):
-        return do_op(self.val, rhs, multiply)
+    def __rmul__(self,lhs):
+        return do_op(self.val, lhs, multiply)
     def __mul__(self,rhs):
         return do_op(self.val, rhs, multiply)
     def __add__(self,rhs):
         return do_op(self.val, rhs, add)
-    def __radd__(self,rhs):
-        return do_op(rhs,self.val, add)
+    def __radd__(self,lhs):
+        return do_op(lhs,self.val, add)
     def __sub__(self,rhs):
         return do_op(self.val, rhs, subtract)
-    def __rsub__(self,rhs):
-        return do_op(rhs,self.val, subtract)
+    def __rsub__(self,lhs):
+        return do_op(lhs,self.val, subtract)
